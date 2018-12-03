@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+    <head>
+        <title>My page</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        
+
+
+        <script>
+        
+        function validateForm()
+        {
+        if (document.forms["myForm"]["name"].value==null || document.forms["myForm"]["name"].value=="")
+        {
+            alert("Name must be filled out");
+            return false;
+        }
+        if (document.forms["myForm"]["phone"].value==null || document.forms["myForm"]["phone"].value=="")
+        {
+            alert("Phone must be filled out");
+            return false;
+        }
+        if (document.forms["myForm"]["email"].value==null || document.forms["myForm"]["email"].value=="")
+        {
+            alert("Email must be filled out");
+            return false;
+        }
+        return true;
+        }
+        </script>
+    </head>
+    <body>
+    <div id="wrapped">
+    
+    <div id="topbar">
+    </div>
+    <ul id="topmenu">
+
+    <div id="wrap">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="#">Table</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="map.html">Map</a></li>
+    <li><a href="#contactus">Contact Us</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    <div id="tableheader">
+    </div>  
+    <div id="wrap">   
+    <div id="content">
+    <div id="mainpage">
+
+    <h1>This page is for presenting some tables and forms </h1>
+    <p>Welcome to look some simple table and form examples.</p>
+
+    <h2> Table examples </h2>
+    
+    <table>
+        <caption> Random Table </caption>
+        <tr>
+            <th colspan="2"> Name </th>
+        <th> Age </th>
+        </tr>
+        <tr>
+        <td> Will </td>
+        <td> Smith </td>
+        <td> 50 </td>
+        </tr>
+        <tr>
+        <td> John </td>
+        <td> Henrikson </td>
+        <td> 21 </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <table id="t1">
+        <tr>
+        <th>Name</th>
+        <td>Bill Gates</th>
+        </tr>
+        <tr>
+        <th rowspan="2">Telephone:
+        </th>
+        <td>55577854</td>
+        </tr>
+        <tr>
+        <td>55577855</td>
+
+    </table> 
+    <br>
+    <br>
+    <table id="t1">
+        <tr>
+        <th>SN</th>
+        <th>Course</th>
+        <th>Student Name</th>
+        </tr>
+        <tr>
+        <td>1</th>
+        <td>WWW ja internet</td>
+        <td> Juha-Matti</td>
+        </tr>
+    </table>
+
+    <h2> Form examples.</h2>
+    <p>First form doesen't have any information validation. Second form will have simple one</p>
+    <form>
+        First Name: <input type="text" name="First Name"> <br>
+        Last Name: <input type="text" name="Last Name"> <br>
+        E-Mail: <input type="email" name="Email"><br>
+        Gender: <br><input type="radio" name="Gender" value="male" checked> Male <br>
+        <input type="radio" name="Gender" value="female"> Female <br>
+        <input type="radio" name="Gender" value="other"> Other <br>
+        <br>
+        
+        
+        Salutation: <select name="salutation">
+        <option>Dr</option>
+        <option>Mr</option>
+        <option>Mrs</option>
+        <option>Miss</option>
+        <option>Ms</option>
+        </select>
+        <br>
+        Favorite Sport: <select name="sport">
+        <option>Baseball</option>
+        <option>Basketball</option>
+        <option>Hockey</option>
+        <option>Football</option>
+        </select> <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h3> Form with validation </h3>
+    <p>Very simple one, doesen't regonize difference between numbers & characters</p>
+    
+    <form name="myForm" onsubmit="return validateForm()">
+        Name: <input type="text" name="name" /><br>
+        Phone: <input type="text" name="phone" /><br>
+        E-Mail: <input type="text" name="email" /><br><br>
+        <input type="submit" value="Click to Submit" /><br>
+    </form>
+    <br><br>
+
+    </div>
+    </div>
+    </div>
+    <div id="wrapped">
+    <div id="footer">
+    <p>Copyright &copy;
+    <script type= "text/javascript">var ct=new Date(); document.write(ct.getFullYear());</script>
+    </p>
+    </div>
+    </div>
+    </body>
+</html>

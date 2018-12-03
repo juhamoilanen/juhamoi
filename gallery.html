@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+    <head>
+        <title>My page</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <script>
+    function allowDrop(ev) 
+	{
+    	ev.preventDefault();
+	}
+    
+    function drag(ev) 
+	{
+    	ev.dataTransfer.setData("text", ev.target.id);
+	}
+    
+    function drop(ev) 
+	{
+    	ev.preventDefault();
+    	var data = ev.dataTransfer.getData("text");
+    	ev.target.appendChild(document.getElementById(data));
+	}
+    </script>
+        
+    </head>
+    <body>
+
+    <div id="wrapped">
+    
+    <div id="topbar">
+    </div>
+    <ul id="topmenu">
+
+    <div id="wrap">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="table.html">Table</a></li>
+    <li class="active"><a href="#">Gallery</a></li>
+    <li><a href="map.html">Map</a></li>
+    <li><a href="#contactus">Contact Us</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    <div id="galleryheader">
+    </div>  
+    <div id="wrap">    
+    <div id="content">
+    <div id="mainpage">
+
+    <h1>Welcome to the Gallery </h1>
+    <p>Here in gallery is one picture from internet and one from folder. And video from youtube.</p>
+
+
+<!-- Image intergration stuff here. -->
+    <h1>Image loaginds</h1>
+    <hr>
+    <h2> First image is from internet</h><br>
+    <img src="https://www.kamk.fi/layouts/KAMK_2018/images/kamk-logo.png" alt= "Kamk logo"> <br>
+
+    <h2> Second image is from the folder. Scaled down alot.</h2>
+    <img src="images/editor.png" alt="editor image" width="512" height="316">
+    <hr>
+    <h2>Drag and drop</h2>
+
+   <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img src="images/img_logo.gif" draggable="true" ondragstart="drag(event)" id="drag1" alt="W3Schools"></div>
+    <div id="div2" ondrop="drop(event" ondragover="allowDrop(event)"</div> -->
+    
+    <hr>
+    <br>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="images/img_logo.gif" draggable="true" ondragstart="drag(event)" id="drag1" alt="W3Schools"></div><br>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <p style="clear:both">Drag the W3Schools image between the rectangles.</p>
+    <hr>
+
+    <h2>Integrating youtube video into your web page </h2>
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SrLv0vlvZvI?start=19" 
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    <hr>
+    </div>
+    </div>
+    </div>
+    <div id="wrapped">
+    <div id="footer">
+    <p>Copyright &copy;
+    <script type= "text/javascript">var ct=new Date(); document.write(ct.getFullYear());</script>
+    </p>
+    </div>
+    </div>
+    </body>
+</html>
